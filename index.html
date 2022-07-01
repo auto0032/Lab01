@@ -12,11 +12,16 @@
 
 <body>
     <div id="app">
-        <h1>Product goes here</h1>
+        <h1>{{product}}</h1>
+        <h3>{{description}}</h3>
+        <div class="nav-bar"></div>
     </div>
 
     <!-- Import Js -->
     <script src="./main.js"></script>
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
 </body>
 
 </html>
