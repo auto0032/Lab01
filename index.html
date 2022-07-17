@@ -29,8 +29,10 @@
                     <p v-if="onSale">on Sale</p>
                     <ul>
                         <li v-for="detail in details">{{detail}}</li>
+                        <li v-for="s in size">{{s}}</li>
                     </ul>
-                    <div v-for="variant in variants" :key="variant.id">{{variant.color}}</div>
+                    <div v-for="variant in variants" :key="variant.id" @mouseover="updateImage(variant.image)">{{variant.color}}</div>
+                    <button class="button" @click="addToCart">Add to Cart</button>
                 </div>
             </div>
         </div>
